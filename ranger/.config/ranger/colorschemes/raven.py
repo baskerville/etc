@@ -56,7 +56,7 @@ class Raven(ColorScheme):
                     attr |= bold
                 if context.marked:
                     attr |= bold
-                    fg = yellow
+                    fg = white
             if context.badinfo:
                 if attr & reverse:
                     bg = magenta
@@ -83,7 +83,7 @@ class Raven(ColorScheme):
                     fg = magenta
             if context.marked:
                 attr |= bold | reverse
-                fg = yellow
+                fg = white
             if context.message:
                 if context.bad:
                     attr |= bold

@@ -1,0 +1,132 @@
+set realname = "Bastien Dejean"
+set from = "nihilhill@gmail.com"
+
+set mbox_type = Maildir
+set folder = ~/.maildir
+set spoolfile = +/inbox
+set postponed = +/drafts
+set record = +/sent
+set header_cache = ~/.hcache
+
+set sendmail = /usr/local/bin/msmtp
+set sendmail_wait = -1
+set copy
+
+unset move
+set auto_tag
+set autoedit
+set fast_reply
+set include
+set delete
+set quit
+set edit_headers
+unset confirmappend
+unset confirmcreate
+unset wait_key
+set postpone = ask-yes
+set reply_to
+set weed
+set beep_new
+
+set alias_file = ~/.mutt/aliases
+set sort_alias = alias
+set reverse_alias
+source $alias_file
+
+hdr_order From To Cc Bcc Subject
+alternative_order text/plain text/enriched text/html
+
+ignore *
+unignore date from subject to cc
+
+set sort = threads
+set sort_browser = reverse-date
+set sort_aux = reverse-last-date-received
+
+set charset = "utf-8"
+set send_charset = "utf-8"
+set mail_check = 60
+set attribution = "%n:"
+
+set editor=e
+unset pipe_decode
+
+set pager_index_lines = 10
+set pager_context = 5
+set menu_scroll
+set smart_wrap
+set tilde
+unset markers
+set status_on_top
+auto_view text/html
+
+set date_format    = "%Y/%m/%d %H:%M"
+set pager_format   = "Message %C of %m %> [%P]"
+set folder_format  = "%2C %t %N %8s %d %f"
+set status_format  = "%f %?n? %n ? (%?o?%o/?%m)  [%l]  %V %> (%s/%S)  %P"
+set forward_format = "Fwd: %s"
+
+bind editor <space>   noop
+bind index,pager \#   noop
+bind index i          noop
+bind attach,compose ? noop
+bind index,pager,attach,compose \Cs noop
+bind index,pager,attach,compose \Cq noop
+
+bind attach <return>  view-mailcap
+bind index,pager <tab> next-unread
+bind index,pager <backtab> previous-unread
+bind pager <up>       previous-line
+bind pager <down>     next-line
+bind pager <          previous-line
+bind pager >          next-line
+bind pager gg         top
+bind pager G          bottom
+bind index gg         first-entry
+bind index G          last-entry
+bind index,pager \Cf  next-page
+bind index,pager \Cb  previous-page
+bind index \Cj        next-thread
+bind index \Ck        previous-thread
+bind index,pager,attach,compose <F3> help
+bind index,pager ? search-reverse
+bind pager b previous-page
+bind pager B bounce-message
+bind index,pager,attach,compose Q exit
+
+macro compose a "<attach-file><kill-line>$XDG_DOWNLOAD_DIR/"
+macro index,pager Y ":set pipe_decode\n<pipe-message>xclip -sel clip -i\n:unset pipe_decode\n"
+macro index,pager A "<pipe-message>view_attachments\n"
+macro index,pager , "<pipe-message>yank_from\n"
+macro index,pager \ef "<pipe-message>mutt_show_xface\n"
+macro attach S "<save-entry><kill-line>$XDG_DOWNLOAD_DIR/\na"
+macro index ( "<search-reverse>~P\n"
+macro index ) "<search>~P\n"
+macro index,attach { "<first-entry>"
+macro index,attach } "<last-entry>"
+macro index M "<tag-pattern>.\n<clear-flag>N<clear-flag>O<clear-flag>*" "Mark all messages as read"
+
+macro index,pager gi "<change-folder>=inbox\n" "Go to INBOX"
+macro index,pager gs "<change-folder>=sent\n" "Go to Sent Mail"
+macro index,pager gd "<change-folder>=drafts\n" "Go to Drafts"
+macro index,pager gl "<change-folder>=lists\n" "Go to Lists"
+macro index,pager gk "<change-folder>=suckless\n" "Go to Suckless"
+macro index,pager ga "<change-folder>=arch\n" "Go to Arch"
+macro index,pager gc "<change-folder>=commandes\n" "Go to Commandes"
+macro index,pager gp "<change-folder>=paypal\n" "Go to Paypal"
+macro index,pager gf "<change-folder>=fai\n" "Go to FAI"
+macro index,pager gb "<change-folder>=bspwm\n" "Go to Bspwm"
+macro index,pager go "<change-folder>=golang\n" "Go to Golang"
+macro index,pager gr "<change-folder>=starred\n" "Go to Starred"
+macro index,pager gt "<change-folder>=topics\n" "Go to Topics"
+macro index,pager * "<save-message>=starred\n" "Move to Starred"
+macro index,pager _ "<save-message>=topics\n" "Move to Topics"
+macro pager \ee ":unset display_filter<enter><exit><display-message>" "Clear display filter"
+macro pager \er ":set display_filter=\"/usr/bin/tr 'A-Za-z' 'N-ZA-Mn-za-m'\"<enter><exit><display-message>" "Rot13 display filter"
+
+source ~/.mutt/theme
+
+folder-hook !=sent 'set index_format = "%3C  %?X?A& ?%Z   %-21.21n  %s %> %D  %4c"'
+folder-hook =sent 'set index_format = "%3C  %?X?A& ?%Z   %-21.21t  %s %> %D  %4c"'
+
+mailboxes =inbox =lists =bspwm =sxhkd =baskerville =commandes =paypal =fai =xd

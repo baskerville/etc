@@ -1,0 +1,36 @@
+browser "open -g %u"
+# html-renderer "w3m -dump -T text/html"
+html-renderer "elinks -dump -force-html"
+max-items 100
+
+bind-key ^B pageup
+bind-key ^F pagedown
+bind-key k up
+bind-key j down
+bind-key h left
+bind-key l right
+bind-key m toggle-show-read-feeds
+bind-key s sort
+bind-key S rev-sort
+bind-key g home
+bind-key G end
+
+feedlist-title-format     " Feeds (%u unread) "
+articlelist-title-format  " %T (%u unread) "
+itemview-title-format     " %T "
+feedlist-format           " %4i  %n %8u  %t "
+articlelist-format        " %4i  %f %?T?|%-17T|  ?%t "
+
+color background default default
+color listnormal default default
+color listnormal_unread default default
+# color listfocus cyan default bold reverse
+color listfocus default default reverse
+# color listfocus_unread cyan default bold reverse
+color listfocus_unread default default reverse
+color info white black
+color article default default
+
+highlight article "^(Feed|Title|Author|Link|Date):.*" black default bold
+
+# vim: ft=conf

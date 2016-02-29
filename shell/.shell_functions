@@ -29,7 +29,7 @@ yc() {
 
 dehdr() {
 	for s in *.c ; do
-		CFLAGS="-Werror -Wfatal-errors" deheader "$@" -i "${s%.*}\.h" "$s" | sed -n 's/.*: *remove *\(.*\) *from *\(.*\)/\2: \1/p'
+		CFLAGS="${CFLAGS} -Werror -Wfatal-errors" deheader "$@" -i "${s%.*}\.h" "$s" | sed -n 's/.*: *remove *\(.*\) *from *\(.*\)/\2: \1/p'
 	done
 }
 

@@ -101,26 +101,42 @@ filetype plugin indent on
 let g:pandoc#syntax#conceal#use = 0
 let g:pandoc#syntax#codeblocks#embeds#langs = ["rust", "c", "sh"]
 let g:bgtype = system("cat $HOME/.bgtype")
-let g:terminal_color_0 = '#5b5955'
-let g:terminal_color_1 = '#cc7b7b'
-let g:terminal_color_2 = '#55a884'
-let g:terminal_color_3 = '#b39212'
-let g:terminal_color_4 = '#5d9fcd'
-let g:terminal_color_5 = '#b780ba'
-let g:terminal_color_6 = '#26a9b7'
-let g:terminal_color_7 = '#f1ead9'
-let g:terminal_color_8 = '#767166'
-let g:terminal_color_9 = '#ffa4a4'
-let g:terminal_color_10 = '#86d8b2'
-let g:terminal_color_11 = '#d9c171'
-let g:terminal_color_12 = '#8ccefe'
-let g:terminal_color_13 = '#e9afeb'
-let g:terminal_color_14 = '#5bdbda'
-let g:terminal_color_15 = '#fffaf0'
 if g:bgtype == "dark"
 	set bg=dark
+	let g:terminal_color_0 = '#5b5955'
+	let g:terminal_color_1 = '#cc7b7b'
+	let g:terminal_color_2 = '#55a884'
+	let g:terminal_color_3 = '#b39212'
+	let g:terminal_color_4 = '#5d9fcd'
+	let g:terminal_color_5 = '#b780ba'
+	let g:terminal_color_6 = '#26a9b7'
+	let g:terminal_color_7 = '#f1ead9'
+	let g:terminal_color_8 = '#908a7f'
+	let g:terminal_color_9 = '#ffa4a4'
+	let g:terminal_color_10 = '#86d8b2'
+	let g:terminal_color_11 = '#d9c171'
+	let g:terminal_color_12 = '#8ccefe'
+	let g:terminal_color_13 = '#e9afeb'
+	let g:terminal_color_14 = '#5bdbda'
+	let g:terminal_color_15 = '#fffaf0'
 else
 	set bg=light
+	let g:terminal_color_0 = '#c3c1c0'
+	let g:terminal_color_1 = '#ee6067'
+	let g:terminal_color_2 = '#27b080'
+	let g:terminal_color_3 = '#bb8e00'
+	let g:terminal_color_4 = '#29a4e9'
+	let g:terminal_color_5 = '#d06ada'
+	let g:terminal_color_6 = '#00adad'
+	let g:terminal_color_7 = '#484747'
+	let g:terminal_color_8 = '#979595'
+	let g:terminal_color_9 = '#bf0004'
+	let g:terminal_color_10 = '#057400'
+	let g:terminal_color_11 = '#745d00'
+	let g:terminal_color_12 = '#0065ca'
+	let g:terminal_color_13 = '#9935a6'
+	let g:terminal_color_14 = '#007978'
+	let g:terminal_color_15 = '#242423'
 endif
 
 exec "colorscheme raven-" . &bg
@@ -150,7 +166,7 @@ if has("autocmd")
 	autocmd FileType vim setlocal keywordprg=:help
 	autocmd FileType coffee setlocal ts=2 sw=2 expandtab
 	autocmd Filetype python setlocal ts=4 sw=4 expandtab
-	autocmd Filetype javascript setlocal makeprg=gulp\ jshint\ \\\|\ grep\ ^/ errorformat=%f:\ line\ %l\\,\ col\ %c\\,\ %m
+	autocmd Filetype javascript setlocal makeprg=gulp\ jshint errorformat=%f:\ line\ %l\\,\ col\ %c\\,\ %m
 	autocmd FileType tex nmap <leader><return> :!xelatex % && open %<.pdf &<cr>
 
 	autocmd BufRead,BufEnter *.h set filetype=c

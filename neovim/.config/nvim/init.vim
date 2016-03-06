@@ -100,7 +100,9 @@ filetype plugin indent on
 
 let g:pandoc#syntax#conceal#use = 0
 let g:pandoc#syntax#codeblocks#embeds#langs = ["rust", "c", "sh"]
+let g:terminal_scrollback_buffer_size = 100000
 let g:bgtype = system("cat $HOME/.bgtype")
+
 if g:bgtype == "dark"
 	set bg=dark
 	let g:terminal_color_0 = '#5b5955'

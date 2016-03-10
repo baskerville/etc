@@ -73,7 +73,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'vim-scripts/applescript.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'tikhomirov/vim-glsl'
-Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
 Plug 'junegunn/vim-easy-align'
@@ -98,8 +97,6 @@ call plug#end()
 syntax on
 filetype plugin indent on
 
-let g:pandoc#syntax#conceal#use = 0
-let g:pandoc#syntax#codeblocks#embeds#langs = ["rust", "c", "sh"]
 let g:terminal_scrollback_buffer_size = 100000
 let g:bgtype = system("cat $HOME/.bgtype")
 

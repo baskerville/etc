@@ -61,6 +61,7 @@ alias enel='trans en:el'
 
 alias s='sr duckduckgo'
 alias mdur="mediainfo --Inform='General;%Duration/String%'"
+alias vbpf="mediainfo --Inform='Video;%Bits-(Pixel*Frame)%'"
 # alias vdim="mediainfo --Inform='Video;%Width%x%Height%'"
 
 alias detox='detox -v'

@@ -99,6 +99,8 @@ filetype plugin indent on
 
 let g:terminal_scrollback_buffer_size = 100000
 let g:bgtype = system("cat $HOME/.bgtype")
+let g:neomake_warning_sign = {'text': '?', 'texthl': 'WarningMsg'}
+let g:neomake_error_sign = {'text': '!', 'texthl': 'ErrorMsg'}
 
 if g:bgtype == "dark"
 	set bg=dark

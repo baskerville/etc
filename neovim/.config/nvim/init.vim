@@ -99,8 +99,11 @@ filetype plugin indent on
 
 let g:terminal_scrollback_buffer_size = 100000
 let g:bgtype = system("cat $HOME/.bgtype")
-let g:neomake_warning_sign = {'text': '?', 'texthl': 'WarningMsg'}
-let g:neomake_error_sign = {'text': '!', 'texthl': 'ErrorMsg'}
+let g:neomake_error_sign = {'text': 'E', 'texthl': 'ErrorMsg'}
+let g:neomake_warning_sign = {'text': 'W', 'texthl': 'WarningMsg'}
+let g:neomake_informational_sign = {'text': 'I', 'texthl': 'ModeMsg'}
+let g:neomake_message_sign = {'text': 'M', 'texthl': 'MoreMsg'}
+let g:neomake_open_list = 2
 
 if g:bgtype == "dark"
 	set bg=dark
@@ -168,6 +171,7 @@ if has("autocmd")
 	autocmd FileType coffee setlocal ts=2 sw=2 expandtab
 	autocmd Filetype python setlocal ts=4 sw=4 expandtab
 	autocmd Filetype javascript setlocal makeprg=gulp\ jshint errorformat=%f:\ line\ %l\\,\ col\ %c\\,\ %m
+	autocmd Filetype c setlocal errorformat=%-G%f:%s:,%f:%l:%c:\ %trror:\ %m,%f:%l:%c:\ %tarning:\ %m,%f:%l:%c:\ %m,%f:%l:\ %trror:\ %m,%f:%l:\ %tarning:\ %m,%f:%l:\ %m
 	autocmd FileType tex nmap <leader><return> :!xelatex % && open %<.pdf &<cr>
 
 	autocmd BufRead,BufEnter *.h set filetype=c

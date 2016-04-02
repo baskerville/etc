@@ -100,6 +100,10 @@ hi MatchParen guifg=#fff9ed guibg=#c20054 gui=none
 hi TermCursor guifg=#fff9ed guibg=#739823 gui=none
 hi TermCursorNC guifg=#fff9ed guibg=#8bb33b gui=none
 
+" QuickFix
+hi qfFileName guifg=#626262 guibg=#fff9ed gui=none
+hi qfLineNr guifg=#949494 guibg=#fff9ed gui=none
+
 " Cursor
 hi CursorLine guibg=#f4efe4 gui=none
 hi CursorColumn guibg=#f4efe4 gui=none
@@ -110,10 +114,10 @@ hi Search guifg=#fff9ed guibg=#c3a200 gui=none
 hi IncSearch guifg=#fff9ed guibg=#ec7c38 gui=none
 
 " Diff Mode
-hi DiffAdd guifg=#fff9ed guibg=#5faf00 gui=none
-hi DiffChange guifg=#fff9ed guibg=#870000 gui=none
-hi DiffText guifg=#fff9ed guibg=#d70087 gui=bold
-hi DiffDelete guifg=#fff9ed guibg=#626262 gui=none
+hi DiffAdd guifg=#fff9ed guibg=#3db06c gui=none
+hi DiffChange guifg=#fff9ed guibg=#3c649f gui=none
+hi DiffText guifg=#fff9ed guibg=#4c77c2 gui=bold
+hi DiffDelete guifg=#fff9ed guibg=#c7438b gui=none
 
 " Spell
 hi SpellBad guifg=#f23766 guibg=#fff9ed gui=underline

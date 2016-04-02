@@ -97,8 +97,12 @@ hi LineNr guifg=#808080 guibg=#3d3c3c gui=none
 hi MatchParen guifg=#292828 guibg=#ff5486 gui=none
 
 " Terminal
-hi TermCursor guifg=#292828 guibg=#9bbf71 gui=none
-hi TermCursorNC guifg=#292828 guibg=#7ea056 gui=none
+hi TermCursor guifg=#292828 guibg=#a2c678 gui=none
+hi TermCursorNC guifg=#292828 guibg=#85a85d gui=none
+
+" QuickFix
+hi qfFileName guifg=#b2b2b2 guibg=#292828 gui=none
+hi qfLineNr guifg=#808080 guibg=#292828 gui=none
 
 " Cursor
 hi CursorLine guibg=#333232 gui=none

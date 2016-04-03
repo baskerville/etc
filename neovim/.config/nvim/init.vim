@@ -207,6 +207,7 @@ nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
+map Q <Nop>
 nmap j gj
 nmap k gk
 nmap <leader>u :call DumpColorScheme()<cr>

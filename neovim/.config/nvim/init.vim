@@ -154,6 +154,9 @@ hi def link markdownCode Comment
 hi def link markdownCodeBlock Comment
 hi def link rubySharpBang Comment
 hi def link htmlString String
+hi def link qfFileName Normal
+hi def link qfLineNr Comment
+hi def link qfError ErrorMsg
 
 if has("autocmd")
 	autocmd FileType mail silent! call CleanMuttHeader()
@@ -221,6 +224,7 @@ nmap <leader>j :bn<cr>
 nmap <leader>k :bp<cr>
 nmap <leader>l gt
 nmap <leader>h gT
+nmap <leader><return> :copen<cr>
 nmap <leader>d :bdelete<cr>
 nmap <silent> <leader>D :call delete(expand('%'))<cr>
 nmap <leader>E :set expandtab!<cr>

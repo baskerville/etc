@@ -7,11 +7,12 @@
 [push]
 	default = simple
 [merge]
-  tool = vimdiff
+	tool = vimdiff
+	ff = only
 [mergetool]
-  prompt = false
+	prompt = false
 [mergetool "vimdiff"]
-  cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+	cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [alias]
 	ls = log --oneline --decorate --graph
 [color]

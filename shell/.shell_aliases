@@ -80,7 +80,6 @@ alias python='python3 -q'
 alias bc='bc -q'
 # alias pps2pdf='loimpress --nologo --convert-to pdf'
 alias dfc='dfc -np /dev'
-alias wrp='wr FRXX0076'
 alias slrn='slrn --spool'
 
 # alias dfc='dfc -d -c never'

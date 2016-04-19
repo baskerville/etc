@@ -1,6 +1,12 @@
 <?xml version="1.0"?>
 <root>
 	<item>
+		<name>Right to fn</name>
+		<appendix>(Right alone sends Right)</appendix>
+		<identifier>private.right_to_fn_right</identifier>
+		<autogen>__KeyOverlaidModifier__ KeyCode::CURSOR_RIGHT, KeyCode::FN, KeyCode::CURSOR_RIGHT</autogen>
+	</item>
+	<item>
 		<name>Return to Control_R</name>
 		<appendix>(Return alone sends Return)</appendix>
 		<identifier>private.return_to_control_return</identifier>

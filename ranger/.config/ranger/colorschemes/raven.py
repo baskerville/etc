@@ -71,7 +71,7 @@ class Raven(ColorScheme):
                 fg = blue
             elif context.tab:
                 if context.good:
-                    bg = green
+                    attr |= reverse
             elif context.link:
                 fg = yellow
 

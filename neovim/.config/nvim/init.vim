@@ -35,7 +35,7 @@ set smartcase
 " use proper syntax highlighting for shell scripts
 let g:is_posix = 1
 " enable true color support
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set termguicolors
 
 " content of the status line
 set statusline=

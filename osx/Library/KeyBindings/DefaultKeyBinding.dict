@@ -298,6 +298,12 @@ Key Modifiers
 		"?" = {
 			"I" = ("insertText:", "¿");
 		};
+		"," = {
+			"." = ("insertText:", "…");
+		};
+		"=" = {
+			"e" = ("insertText:", "€");
+		};
 		"!" = {
 			"I" = ("insertText:", "¡");
 			"=" = ("insertText:", "≠");

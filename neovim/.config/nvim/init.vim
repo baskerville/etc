@@ -272,6 +272,9 @@ nmap <leader>! :w ! sudo tee %<cr>
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
+" Add digraph for horizontal ellipsis
+dig ,. 8230
+
 function! DumpColorScheme()
 	exec "redir > " . g:colors_name . ".vimTheme | silent hi | redir END"
 endfunction

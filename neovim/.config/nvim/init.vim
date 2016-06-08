@@ -179,16 +179,12 @@ if has("autocmd")
 
 	autocmd BufRead,BufEnter *.h set filetype=c
 	autocmd BufRead,BufEnter *tmux.conf set filetype=tmux
-	autocmd BufNewFile,BufFilePRe,BufRead *.md set filetype=markdown.pandoc
 
 	" Jump to the last editing position
 	autocmd BufReadPost * exe "normal! '\""
 
 	" Mark the current file as recently modified
 	autocmd BufRead,BufEnter * call system("fdb -i " . $XDG_DATA_HOME . "/edit.json -a " . shellescape(expand("%:p")) . " &")
-
-	" Set tmux pane title
-	autocmd BufEnter * call system("settitle " . expand("%:p:t"))
 
 	if exists("+omnifunc")
 		autocmd Filetype *

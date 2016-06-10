@@ -1,7 +1,9 @@
 md5 = require "md5"
 utils = require "mp.utils"
+msg = require "mp.msg"
 
 bookmarks_path = os.getenv("XDG_CONFIG_HOME") .. "/mpv/scripts/bkms"
+epsilon_duration = 0.1
 
 function get_filepath ()
 	local filename = mp.get_property("filename")
@@ -29,7 +31,7 @@ function move_to (dir)
 		end
 		for line in f:lines() do
 			local p = tonumber(line)
-			if (dir == "prev" and p < c and p > n) or (dir == "next" and p > c and p < n) then
+			if math.abs(p-c) > epsilon_duration and ((dir == "prev" and p < c and p > n) or (dir == "next" and p > c and p < n)) then
 				n = p
 			end
 		end
@@ -62,7 +64,7 @@ function erase_current_bookmark ()
 		for i = 1,#lines do
 			local line = lines[i]
 			local p = tonumber(line)
-			if p ~= c then
+			if math.abs(p-c) > epsilon_duration then
 				f:write(line, "\n")
 			end
 		end
@@ -74,8 +76,13 @@ function erase_all_bookmarks ()
 	os.remove(get_filepath())
 end
 
+function print_bookmarks_path ()
+	msg.info(get_filepath())
+end
+
 mp.add_key_binding("F2", add_bookmark)
 mp.add_key_binding("F3", move_to_prev)
 mp.add_key_binding("F4", move_to_next)
 mp.add_key_binding("F5", erase_current_bookmark)
 mp.add_key_binding("F6", erase_all_bookmarks)
+mp.add_key_binding("F12", print_bookmarks_path)

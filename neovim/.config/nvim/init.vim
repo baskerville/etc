@@ -86,11 +86,9 @@ Plug 'cespare/vim-toml'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
-Plug 'tejr/vim-tmux'
 Plug 'groenewege/vim-less'
 Plug 'nsf/gocode', {'rtp': 'vim'}
 Plug 'jnurmine/Zenburn'
-" Plug 'baskerville/bubblegum'
 Plug 'baskerville/vim-quirks'
 call plug#end()
 

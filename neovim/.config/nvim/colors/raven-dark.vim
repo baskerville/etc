@@ -55,7 +55,7 @@ hi Special guifg=#d78787 guibg=#292828 gui=none
 hi SpecialChar guifg=#d78787 guibg=#292828 gui=none
 hi Tag guifg=#d78787 guibg=#292828 gui=none
 hi Delimiter guifg=#929190 guibg=#292828 gui=none
-hi SpecialComment guifg=#d78787 guibg=#292828 gui=none
+hi SpecialComment guifg=#808080 guibg=#292828 gui=none
 hi Debug guifg=#d78787 guibg=#292828 gui=none
 hi Underlined guifg=#b2b2b2 guibg=#292828 gui=underline
 hi Ignore guifg=#262626 guibg=#292828 gui=none

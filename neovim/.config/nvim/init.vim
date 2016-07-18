@@ -97,6 +97,7 @@ filetype plugin indent on
 
 let g:terminal_scrollback_buffer_size = 100000
 let g:bgtype = system("cat $HOME/.bgtype")
+let g:rustfmt_autosave = 1
 let g:neomake_error_sign = {'text': 'E', 'texthl': 'ErrorMsg'}
 let g:neomake_warning_sign = {'text': 'W', 'texthl': 'WarningMsg'}
 let g:neomake_informational_sign = {'text': 'I', 'texthl': 'ModeMsg'}

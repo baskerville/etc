@@ -5,6 +5,8 @@ alias cpr='cp -r'
 
 alias i='type -a'
 alias y='file -b'
+alias m=mutt
+alias cal='ical'
 alias mt='file -b --mime-type'
 alias me='file -b --mime-encoding'
 alias ms='mpc search any'
@@ -37,6 +39,8 @@ alias on='o "$(nn)"'
 alias so='o "$(rndfp)"'
 alias gin='fileinfo "$(nn)"'
 alias lta='later add'
+alias lts='later ls'
+alias ltr='later rm'
 
 alias rmrf='rm -rf'
 alias rmnn='rm -iv -- "$(nn)"'
@@ -59,14 +63,13 @@ alias enja='trans en:ja'
 alias elen='trans el:en'
 alias enel='trans en:el'
 
-alias s='sr duckduckgo'
+alias s='surfraw duckduckgo'
 alias mdur="mediainfo --Inform='General;%Duration/String%'"
 alias vbpf="mediainfo --Inform='Video;%Bits-(Pixel*Frame)%'"
-# alias vdim="mediainfo --Inform='Video;%Width%x%Height%'"
+alias vres="mediainfo --Inform='Video;%Width%x%Height%'"
 
 alias detox='detox -v'
 alias mp4box='MP4Box'
-alias df='df -H'
 
 alias up='git commit -am Update'
 alias pu='git push'

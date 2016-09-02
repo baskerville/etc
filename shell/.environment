@@ -25,17 +25,18 @@ export XDG_DOWNLOAD_DIR XDG_ETC_DIR XDG_COLORS_DIR XDG_TRASH_DIR XDG_BIN_DIR XDG
 
 GOPATH="$HOME/.go"
 SHARE_ROOT=/mnt/livebox/data
-LIBGS=/usr/local/opt/ghostscript/lib/libgs.dylib
+LIBGS=/opt/pkg/lib/libgs.dylib
 TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
 PYTHONIOENCODING='utf-8'
-XML_CATALOG_FILES=/usr/local/etc/xml/catalog
+XML_CATALOG_FILES=/opt/pkg/etc/xml/catalog
 BC_ENV_ARGS="-ql $HOME/.bcrc"
 export GOPATH SHARE_ROOT LIBGS TEXINPUTS PYTHONIOENCODING XML_CATALOG_FILES BC_ENV_ARGS
 
 DISPLAY=:0
+LIBRARY_PATH="/opt/pkg/lib:$LIBRARY_PATH"
 CFLAGS=-I/opt/X11/include
 LDFLAGS=-L/opt/X11/lib
-export DISPLAY CFLAGS LDFLAGS
+export DISPLAY LIBRARY_PATH CFLAGS LDFLAGS
 
 NNTPSERVER=pasdenom.info
 SLRNPULL_ROOT="$HOME/.usenet"

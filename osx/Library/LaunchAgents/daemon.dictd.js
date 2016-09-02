@@ -1,11 +1,13 @@
 {
 	"Label": "daemon.dictd",
 	"ProgramArguments": [
-		"/usr/local/sbin/dictd",
-		"-c",
-		"/etc/dictd.conf",
-		"--pid-file",
-		"/tmp/dictd.pid"
+		"/opt/pkg/sbin/dictd",
+		"--debug",
+		"nodetach",
+		"--log",
+		"server",
 	],
-	"RunAtLoad": true
+	"StandardOutPath": "/tmp/dictd.out",
+	"StandardErrorPath": "/tmp/dictd.err",
+	"RunAtLoad": true,
 }

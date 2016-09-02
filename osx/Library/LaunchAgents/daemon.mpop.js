@@ -1,7 +1,7 @@
 {
 	"Label": "daemon.mpop",
 	"ProgramArguments": [
-		"/usr/local/bin/mpop",
+		"/opt/pkg/bin/mpop",
 		"-a"
 	],
 	"StartInterval": 300,

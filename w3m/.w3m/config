@@ -1,0 +1,18 @@
+extbrowser ~/bin/wb
+extbrowser2 sh -c 'printf %s "$0"' | pbcopy
+extbrowser3 
+confirm_qq 1
+save_hist 1
+history 100
+use_history 1
+visited_color red
+visited_anchor 0
+active_color cyan
+active_style 0
+bg_color terminal
+mark_color black
+form_color yellow
+image_color magenta
+anchor_color blue
+basic_color terminal
+color 1

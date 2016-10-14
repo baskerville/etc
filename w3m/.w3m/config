@@ -6,7 +6,7 @@ save_hist 1
 history 100
 use_history 1
 visited_color red
-visited_anchor 1
+visited_anchor 0
 active_color cyan
 active_style 1
 bg_color terminal

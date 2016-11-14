@@ -70,6 +70,7 @@ alias vres="mediainfo --Inform='Video;%Width%x%Height%'"
 
 alias detox='detox -v'
 alias mp4box='MP4Box'
+alias ctags='exctags'
 
 alias up='git commit -am Update'
 alias pu='git push'

@@ -102,6 +102,7 @@ let g:neomake_warning_sign = {'text': 'W', 'texthl': 'WarningMsg'}
 let g:neomake_informational_sign = {'text': 'I', 'texthl': 'ModeMsg'}
 let g:neomake_message_sign = {'text': 'M', 'texthl': 'MoreMsg'}
 let g:neomake_open_list = 2
+let g:neomake_rust_enabled_makers = ['cargo']
 
 if g:bgtype == "dark"
 	set bg=dark

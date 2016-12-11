@@ -165,3 +165,4 @@ hi mailSignature guifg=#808080 guibg=#292828 gui=none
 hi markdownCode guifg=#808080 guibg=#292828 gui=none
 hi markdownCodeBlock guifg=#808080 guibg=#292828 gui=none
 hi markdownItalic guifg=#d0d0d0 guibg=#292828 gui=none
+hi markdownBold guifg=#d7d1ae guibg=#292828 gui=none

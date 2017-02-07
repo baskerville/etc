@@ -10,4 +10,4 @@ MANPATH=/usr/local/man:/opt/pkg/share/man
 export MANPATH
 eval $(/usr/libexec/path_helper -s)
 typeset -U path
-path=($path ~/bin ~/.local/bin ~/.local/bin/clang-checker ~/.local/bin/FDK/Tools/osx ~/.cargo/bin $GOPATH/bin)
+path=($path ~/bin ~/.local/bin ~/.local/bin/clang-checker/bin ~/.local/bin/FDK/Tools/osx ~/.cargo/bin $GOPATH/bin)

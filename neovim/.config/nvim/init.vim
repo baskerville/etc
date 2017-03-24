@@ -175,6 +175,7 @@ if has("autocmd")
 	autocmd Filetype javascript setlocal makeprg=gulp\ jshint errorformat=%f:\ line\ %l\\,\ col\ %c\\,\ %m
 	autocmd Filetype c setlocal errorformat=%-G%f:%s:,%f:%l:%c:\ %trror:\ %m,%f:%l:%c:\ %tarning:\ %m,%f:%l:%c:\ %m,%f:%l:\ %trror:\ %m,%f:%l:\ %tarning:\ %m,%f:%l:\ %m
 	autocmd FileType tex nmap <leader><return> :!xelatex % && open %<.pdf &<cr>
+	autocmd FileType rust nmap <silent> <F12> :Neomake! cargo<cr>
 
 	autocmd BufRead,BufEnter *.h set filetype=c
 	autocmd BufRead,BufEnter *tmux.conf set filetype=tmux

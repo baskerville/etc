@@ -281,6 +281,8 @@ Key Modifiers
 		};
 		"-" = {
 			">" = ("insertText:", "→");
+			"v" = ("insertText:", "↓");
+			"!" = ("insertText:", "↑");
 			"N" = ("insertText:", "–");
 			"M" = ("insertText:", "—");
 			"S" = ("insertText:", "⁻");

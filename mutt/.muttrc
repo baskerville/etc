@@ -6,7 +6,7 @@ set folder = ~/.maildir
 set spoolfile = +/inbox
 set postponed = +/drafts
 set record = +/sent
-set header_cache = ~/.hcache
+set header_cache = ~/.cache/mutt
 
 set sendmail = msmtp
 set sendmail_wait = -1

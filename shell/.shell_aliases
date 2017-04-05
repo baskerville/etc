@@ -64,9 +64,9 @@ alias elen='trans el:en'
 alias enel='trans en:el'
 
 alias s='surfraw duckduckgo'
-alias mdur="mediainfo --Inform='General;%Duration/String%'"
-alias vbpf="mediainfo --Inform='Video;%Bits-(Pixel*Frame)%'"
-alias vres="mediainfo --Inform='Video;%Width%x%Height%'"
+alias mdur="mediainfo --Inform='General;%Duration/String%\n'"
+alias vbpf="mediainfo --Inform='Video;%Bits-(Pixel*Frame)%\n'"
+alias vres="mediainfo --Inform='Video;%Width%x%Height%\n'"
 
 alias detox='detox -v'
 alias mp4box='MP4Box'

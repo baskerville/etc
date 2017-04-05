@@ -102,7 +102,6 @@ let g:neomake_warning_sign = {'text': 'W', 'texthl': 'WarningMsg'}
 let g:neomake_informational_sign = {'text': 'I', 'texthl': 'ModeMsg'}
 let g:neomake_message_sign = {'text': 'M', 'texthl': 'MoreMsg'}
 let g:neomake_open_list = 2
-let g:neomake_rust_enabled_makers = ['cargo']
 
 if g:bgtype == "dark"
 	set bg=dark
@@ -175,7 +174,6 @@ if has("autocmd")
 	autocmd Filetype javascript setlocal makeprg=gulp\ jshint errorformat=%f:\ line\ %l\\,\ col\ %c\\,\ %m
 	autocmd Filetype c setlocal errorformat=%-G%f:%s:,%f:%l:%c:\ %trror:\ %m,%f:%l:%c:\ %tarning:\ %m,%f:%l:%c:\ %m,%f:%l:\ %trror:\ %m,%f:%l:\ %tarning:\ %m,%f:%l:\ %m
 	autocmd FileType tex nmap <leader><return> :!xelatex % && open %<.pdf &<cr>
-	autocmd FileType rust nmap <silent> <F12> :Neomake! cargo<cr>
 
 	autocmd BufRead,BufEnter *.h set filetype=c
 	autocmd BufRead,BufEnter *tmux.conf set filetype=tmux
@@ -255,7 +253,7 @@ nmap <silent> <F8> :call ToggleSyntax()<cr>
 nmap <silent> <F9> :call ToggleConceal()<cr>
 nmap <silent> <F10> :call ToggleColorColumn()<cr>
 nmap <silent> <F11> :call EditSyntax()<cr>
-nmap <silent> <F12> :Neomake!<cr>
+nmap <silent> <F12> :Neomake<cr>
 nmap <silent> <leader><Tab> :<C-u>exe "setlocal ts=".v:count1." sw=".v:count1<cr>
 nmap <silent> <leader>v :call MakePreview()<cr>
 nmap <silent> <leader>V :call ToggleViewMode()<cr>

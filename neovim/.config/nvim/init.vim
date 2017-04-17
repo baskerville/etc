@@ -36,6 +36,8 @@ set smartcase
 let g:is_posix = 1
 " enable true color support
 set termguicolors
+" enable contextual cursor shapes
+set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
 
 " content of the status line
 set statusline=
@@ -219,6 +221,7 @@ nmap <leader>k :bp<cr>
 nmap <leader>l gt
 nmap <leader>h gT
 nmap <leader><return> :copen<cr>
+nmap <leader><Esc> :lopen<cr>
 nmap <leader>d :bdelete<cr>
 nmap <silent> <leader>D :call delete(expand('%'))<cr>
 nmap <leader>E :set expandtab!<cr>

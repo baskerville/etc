@@ -220,8 +220,14 @@ Key Modifiers
 		"Z" = {
 			"*" = ("insertText:", "Ζ");
 		};
+		"0" = {
+			"S" = ("insertText:", "⁰");
+			"s" = ("insertText:", "₀");
+			"0" = ("insertText:", "∞");
+		};
 		"1" = {
 			"S" = ("insertText:", "¹");
+			"s" = ("insertText:", "₁");
 			"N" = ("insertText:", " ");
 			"M" = ("insertText:", " ");
 			"2" = ("insertText:", "½");
@@ -233,39 +239,43 @@ Key Modifiers
 		};
 		"2" = {
 			"S" = ("insertText:", "²");
+			"s" = ("insertText:", "₂");
 			"3" = ("insertText:", "⅔");
 			"5" = ("insertText:", "⅖");
 		};
 		"3" = {
 			"S" = ("insertText:", "³");
+			"s" = ("insertText:", "₃");
 			"5" = ("insertText:", "⅗");
 			"8" = ("insertText:", "⅜");
 		};
 		"4" = {
 			"S" = ("insertText:", "⁴");
+			"s" = ("insertText:", "₄");
 			"5" = ("insertText:", "⅘");
 		};
 		"5" = {
 			"S" = ("insertText:", "⁵");
+			"s" = ("insertText:", "₅");
 			"6" = ("insertText:", "⅚");
 			"8" = ("insertText:", "⅝");
 		};
 		"6" = {
 			"S" = ("insertText:", "⁶");
+			"s" = ("insertText:", "₆");
 		};
 		"7" = {
 			"S" = ("insertText:", "⁷");
+			"s" = ("insertText:", "₇");
 			"8" = ("insertText:", "⅞");
 		};
 		"8" = {
 			"S" = ("insertText:", "⁸");
+			"s" = ("insertText:", "₈");
 		};
 		"9" = {
 			"S" = ("insertText:", "⁹");
-		};
-		"0" = {
-			"S" = ("insertText:", "⁰");
-			"0" = ("insertText:", "∞");
+			"s" = ("insertText:", "₉");
 		};
 		"\"" = {
 			"6" = ("insertText:", "“");

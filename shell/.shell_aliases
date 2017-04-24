@@ -12,8 +12,8 @@ alias me='file -b --mime-encoding'
 # alias ms='mpc search any'
 # alias ma='mpc add'
 alias p="pbpaste | e -"
-alias h="xxd -l 256"
 alias c='pgrep -x mpop > /dev/null 2>&1 || mpop -a'
+alias hd="hexdump -C"
 
 alias chbin='chmod 755'
 alias chreg='chmod 644'

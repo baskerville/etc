@@ -233,10 +233,10 @@ nmap <leader>z viw1z=
 nmap <leader>Z viw2z=
 nmap <leader>w :!open =expand("<cword>")<cr><cr><cr>
 vmap <leader>w y:!open "<cr><cr>
-nmap <leader>[ :cp<cr>
-nmap <leader>] :cn<cr>
-nmap <leader>} :cnf<cr>
-nmap <leader>{ :cpf<cr>
+nmap <leader>[ :lp<cr>
+nmap <leader>] :lN<cr>
+nmap <leader>} :lNf<cr>
+nmap <leader>{ :lpf<cr>
 nmap <leader>* :vimgrep =expand("<cword>")<cr> *
 nmap <silent> <leader>? :call Define(expand("<cword>"))<cr>
 nmap <silent> <leader>. :let @*=expand("%")<cr>

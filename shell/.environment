@@ -35,8 +35,8 @@ export GOPATH SHARE_ROOT LIBGS TEXINPUTS PYTHONIOENCODING XML_CATALOG_FILES BC_E
 DISPLAY=:0
 LIBRARY_PATH="/opt/pkg/lib:$LIBRARY_PATH"
 PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig
-CFLAGS=-I/opt/X11/include
-LDFLAGS=-L/opt/X11/lib
+CFLAGS="-I/opt/X11/include -I/opt/pkg/include"
+LDFLAGS="-L/opt/X11/lib -L/opt/pkg/lib"
 export DISPLAY LIBRARY_PATH PKG_CONFIG_PATH CFLAGS LDFLAGS
 
 NNTPSERVER=pasdenom.info

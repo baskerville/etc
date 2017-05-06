@@ -11,5 +11,5 @@ export MANPATH
 eval $(/usr/libexec/path_helper -s)
 export MANPATH="$MANPATH":~/.local/share/man
 typeset -U path
-path=($path ~/bin ~/.local/bin ~/.local/bin/clang-checker/bin ~/.local/bin/FDK/Tools/osx ~/.cargo/bin $GOPATH/bin)
+path=($path ~/bin ~/.local/bin ~/.local/bin/clang-checker/bin ~/.local/bin/FDK/Tools/osx /opt/pkg/cross-arm-none-eabi/bin ~/.cargo/bin $GOPATH/bin)
 fpath=(~/.zfunc "${fpath[@]}")

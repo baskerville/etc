@@ -105,6 +105,7 @@ hi qfFileName guifg=#b2b2b2 guibg=#292828 gui=none
 hi qfLineNr guifg=#808080 guibg=#292828 gui=none
 
 " Cursor
+hi Cursor guibg=#5bdbda gui=none
 hi CursorLine guibg=#333232 gui=none
 hi CursorColumn guibg=#333232 gui=none
 hi CursorLineNr guifg=#b2b2b2 guibg=#333232 gui=none

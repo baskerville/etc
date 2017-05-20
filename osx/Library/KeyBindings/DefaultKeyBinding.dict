@@ -246,6 +246,7 @@ Key Modifiers
 		"3" = {
 			"S" = ("insertText:", "³");
 			"s" = ("insertText:", "₃");
+			"4" = ("insertText:", "¾");
 			"5" = ("insertText:", "⅗");
 			"8" = ("insertText:", "⅜");
 		};

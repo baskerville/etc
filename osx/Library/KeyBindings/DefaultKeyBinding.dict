@@ -23,7 +23,9 @@ Key Modifiers
 		"a" = {
 			"e" = ("insertText:", "æ");
 			"!" = ("insertText:", "à");
+			"'" = ("insertText:", "á");
 			">" = ("insertText:", "â");
+			"a" = ("insertText:", "å");
 			"*" = ("insertText:", "α");
 		};
 		"b" = {
@@ -35,6 +37,7 @@ Key Modifiers
 		};
 		"d" = {
 			"*" = ("insertText:", "δ");
+			"-" = ("insertText:", "ð");
 		};
 		"e" = {
 			"'" = ("insertText:", "é");
@@ -55,6 +58,7 @@ Key Modifiers
 		"i" = {
 			">" = ("insertText:", "î");
 			":" = ("insertText:", "ï");
+			"'" = ("insertText:", "í");
 			"*" = ("insertText:", "ι");
 		};
 		"k" = {
@@ -62,6 +66,7 @@ Key Modifiers
 		};
 		"l" = {
 			"*" = ("insertText:", "λ");
+			"/" = ("insertText:", "ł");
 		};
 		"m" = {
 			"*" = ("insertText:", "μ");
@@ -73,7 +78,9 @@ Key Modifiers
 		"o" = {
 			"e" = ("insertText:", "œ");
 			">" = ("insertText:", "ô");
+			":" = ("insertText:", "ö");
 			"*" = ("insertText:", "ο");
+			"/" = ("insertText:", "ø");
 		};
 		"p" = {
 			"*" = ("insertText:", "π");
@@ -86,6 +93,7 @@ Key Modifiers
 		};
 		"s" = {
 			"*" = ("insertText:", "σ");
+			"s" = ("insertText:", "ß");
 		};
 		"t" = {
 			"*" = ("insertText:", "τ");
@@ -93,7 +101,9 @@ Key Modifiers
 		"u" = {
 			"!" = ("insertText:", "ù");
 			">" = ("insertText:", "û");
+			"<" = ("insertText:", "ǔ");
 			":" = ("insertText:", "ü");
+			"-" = ("insertText:", "ū");
 			"*" = ("insertText:", "υ");
 		};
 		"w" = {
@@ -104,6 +114,7 @@ Key Modifiers
 		};
 		"y" = {
 			":" = ("insertText:", "ÿ");
+			"'" = ("insertText:", "ý");
 			"*" = ("insertText:", "η");
 		};
 		"z" = {
@@ -113,6 +124,7 @@ Key Modifiers
 			"e" = ("insertText:", "Æ");
 			"!" = ("insertText:", "À");
 			">" = ("insertText:", "Â");
+			"A" = ("insertText:", "Å");
 			"*" = ("insertText:", "Α");
 		};
 		"B" = {
@@ -127,6 +139,7 @@ Key Modifiers
 		};
 		"D" = {
 			"G" = ("insertText:", "°");
+			"-" = ("insertText:", "Ð");
 			"*" = ("insertText:", "Δ");
 		};
 		"E" = {
@@ -157,6 +170,7 @@ Key Modifiers
 		};
 		"L" = {
 			"*" = ("insertText:", "Λ");
+			"/" = ("insertText:", "Ł");
 		};
 		"M" = {
 			"y" = ("insertText:", "µ");
@@ -174,7 +188,9 @@ Key Modifiers
 			"e" = ("insertText:", "Œ");
 			"b" = ("insertText:", "∘");
 			">" = ("insertText:", "Ô");
+			":" = ("insertText:", "Ö");
 			"*" = ("insertText:", "Ο");
+			"/" = ("insertText:", "Ø");
 		};
 		"P" = {
 			"d" = ("insertText:", "£");
@@ -215,6 +231,7 @@ Key Modifiers
 		"Y" = {
 			"e" = ("insertText:", "¥");
 			":" = ("insertText:", "Ÿ");
+			"'" = ("insertText:", "Ý");
 			"*" = ("insertText:", "Η");
 		};
 		"Z" = {
@@ -332,6 +349,8 @@ Key Modifiers
 		};
 		"/" = {
 			"0" = ("insertText:", "∅");
+			"o" = ("insertText:", "ø");
+			"O" = ("insertText:", "Ø");
 		};
 	};
 }

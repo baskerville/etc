@@ -269,7 +269,8 @@ nmap <leader>! :w ! sudo tee %<cr>
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
-" Add digraph for horizontal ellipsis
+" Digraphs missing from RFC 1345
+" Ellipsis
 dig ,. 8230
 
 function! DumpColorScheme()

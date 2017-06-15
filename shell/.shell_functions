@@ -59,26 +59,6 @@ msa() {
 	ms "$@" | ma
 }
 
-g() {
-	local pat=$1
-	local dir=${2:-.}
-	[ $# -gt 1 ] && shift 2 || shift
-	grep "$@" -nr "$pat" "$dir"
-}
-
-F() {
-	local pat=$1
-	local dir=${2:-.}
-	[ $# -gt 1 ] && shift 2 || shift
-	find -L "$dir" "$@" -iregex ".*${pat}.*" -print0 | xargs -0 ls -1d
-}
-
-f() {
-	local pat=$1
-	shift
-	F "$pat" . -maxdepth 1 "$@"
-}
-
 ox() {
 	cmd=$1
 	shift
@@ -86,11 +66,7 @@ ox() {
 }
 
 of() {
-	ox f "$@"
-}
-
-oF() {
-	ox F "$@"
+	ox fd "$@"
 }
 
 L() {

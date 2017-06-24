@@ -194,6 +194,11 @@ if has("autocmd")
 	endif
 endif
 
+if executable("rg")
+	set grepprg=rg\ --vimgrep\ --no-heading
+	set grepformat=%f:%l:%c:%m,%f:%l:%m
+endif
+
 let mapleader = " "
 
 tnoremap <Esc> <C-\><C-n>

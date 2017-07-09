@@ -80,8 +80,10 @@ bind pager <up>       previous-line
 bind pager <down>     next-line
 bind pager <          previous-line
 bind pager >          next-line
+bind pager g          noop
 bind pager gg         top
 bind pager G          bottom
+bind index g          noop
 bind index gg         first-entry
 bind index G          last-entry
 bind index,pager \Cf  next-page

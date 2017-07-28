@@ -228,7 +228,6 @@ nmap <leader>h gT
 nmap <leader><return> :copen<cr>
 nmap <leader><Esc> :lopen<cr>
 nmap <leader>d :bdelete<cr>
-nmap <silent> <leader>D :call delete(expand('%'))<cr>
 nmap <leader>E :set expandtab!<cr>
 nmap <leader>t :%retab!<cr>
 vmap <leader>T :!titlecase<cr>

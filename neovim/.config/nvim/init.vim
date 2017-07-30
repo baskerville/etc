@@ -236,7 +236,7 @@ nmap <leader>H vip:!proto %:r.c<cr>
 nmap <leader>z viw1z=
 nmap <leader>Z viw2z=
 nmap <leader>w :!open =expand("<cword>")<cr><cr><cr>
-nmap <leader>f :!open =expand("<cfile>")<cr><cr><cr>
+nmap <leader>f ya":!open =getreg("*")<cr><cr><cr>
 nmap <leader>[ :lp<cr>
 nmap <leader>] :lne<cr>
 nmap <leader>} :lnf<cr>

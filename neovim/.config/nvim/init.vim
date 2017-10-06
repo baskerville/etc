@@ -34,6 +34,8 @@ set smartcase
 
 " use proper syntax highlighting for shell scripts
 let g:is_posix = 1
+" don't show the file browser banner
+let g:netrw_banner = 0
 " enable true color support
 set termguicolors
 " enable contextual cursor shapes

@@ -7,8 +7,6 @@ alias i='type -a'
 alias y='file -b'
 alias m=mutt
 alias g=rg
-alias f='fd -d 1'
-alias F='fd'
 alias cal='ical'
 alias mt='file -b --mime-type'
 alias me='file -b --mime-encoding'
@@ -25,8 +23,9 @@ alias lsync='rsync -vau --delete'
 alias xee='open -a xee'
 alias unpack='tar -xv --keep-newer-files -f'
 
-alias eal='e $SHELL_ALIASES'
-alias efu='e $SHELL_FUNCTIONS'
+alias eal='e "$SHELL_ALIASES"'
+alias efu='e "$SHELL_FUNCTIONS"'
+alias eo='e -O'
 
 alias ls='ls -h'
 alias l='ls'

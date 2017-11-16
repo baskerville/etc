@@ -21,6 +21,18 @@ oz() {
 	[ -e "$fp" ] && o "$fp"
 }
 
+f() {
+	pattern=$1
+	shift
+	bfs . -maxdepth 1 -iname "*${pattern}*" "$@"
+}
+
+F() {
+	pattern=$1
+	shift
+	bfs . -iname "*${pattern}*" "$@"
+}
+
 lc() {
 	local start=${1:-1}
 	local end=${2:-"$start"}

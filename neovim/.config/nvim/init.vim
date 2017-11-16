@@ -217,7 +217,7 @@ map Q <Nop>
 nmap j gj
 nmap k gk
 nmap <leader>u :call DumpColorScheme()<cr>
-nmap <leader>b :windo setlocal scrollbind!<cr>
+nmap <leader>a :windo setlocal scrollbind!<cr>
 nmap <leader>s :%s/
 vmap <leader>s :s/
 nmap <leader>S :s/
@@ -231,7 +231,6 @@ nmap <leader><return> :copen<cr>
 nmap <leader><Esc> :lopen<cr>
 nmap <leader>d :bdelete<cr>
 nmap <leader>E :set expandtab!<cr>
-nmap <leader>t :%retab!<cr>
 vmap <leader>T :!titlecase<cr>
 vmap <leader>R :!sort<cr>
 nmap <leader>H vip:!proto %:r.c<cr>

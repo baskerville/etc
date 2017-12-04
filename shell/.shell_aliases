@@ -19,7 +19,7 @@ alias hd="hexdump -C"
 alias chbin='chmod 755'
 alias chreg='chmod 644'
 alias operm='stat -f %p'
-alias lsync='rsync -vau --delete'
+alias lsync='rsync -vurt --modify-window 1'
 alias xee='open -a xee'
 alias unpack='tar -xv --keep-newer-files -f'
 

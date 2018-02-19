@@ -7,7 +7,6 @@ alias i='type -a'
 alias y='file -b'
 alias m=mutt
 alias g=rg
-alias cal='ical'
 alias mt='file -b --mime-type'
 alias me='file -b --mime-encoding'
 # alias ms='mpc search any'

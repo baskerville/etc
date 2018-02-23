@@ -24,13 +24,13 @@ oz() {
 f() {
 	pattern=$1
 	shift
-	bfs . -maxdepth 1 -iname "*${pattern}*" "$@"
+	bfs "${@:-.}" -maxdepth 1 -iname "*${pattern}*"
 }
 
 F() {
 	pattern=$1
 	shift
-	bfs . -iname "*${pattern}*" "$@"
+	bfs "${@:-.}" -iname "*${pattern}*"
 }
 
 lc() {

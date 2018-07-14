@@ -20,6 +20,7 @@ alias chreg='chmod 644'
 alias operm='stat -f %p'
 alias lsync='rsync -vurt --modify-window 1'
 alias xee='open -a xee'
+alias preview='open -a preview'
 alias unpack='tar -xv --keep-newer-files -f'
 
 alias eal='e "$SHELL_ALIASES"'
@@ -74,6 +75,7 @@ alias vres="mediainfo --Inform='Video;%Width%x%Height%\n'"
 alias detox='detox -v'
 alias mp4box='MP4Box'
 alias ctags='exctags'
+alias telnet='gtelnet'
 
 alias up='git commit -am Update'
 alias pu='git push'
@@ -94,8 +96,8 @@ alias slrn='slrn --spool'
 # alias dfcr='dfc -nt ext4'
 # alias dfcs='dfc -np /dev/sdc'
 
-alias D='date +%Y%m%d'
-alias T='date +%H%M'
+alias D='date +%Y-%m-%d'
+alias T='date +%H:%M'
 alias M='date +%B'
 alias Y='date +%Y'
 

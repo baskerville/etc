@@ -19,8 +19,6 @@ alias chbin='chmod 755'
 alias chreg='chmod 644'
 alias operm='stat -f %p'
 alias lsync='rsync -vurt --modify-window 1'
-alias xee='open -a xee'
-alias preview='open -a preview'
 alias unpack='tar -xv --keep-newer-files -f'
 
 alias eal='e "$SHELL_ALIASES"'

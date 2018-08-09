@@ -76,9 +76,7 @@ Plug 'benekastah/neomake'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-scripts/applescript.vim'
 Plug 'rust-lang/rust.vim'
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
-Plug 'junegunn/fzf'
-Plug 'roxma/nvim-completion-manager'
+Plug 'racer-rust/vim-racer'
 Plug 'tikhomirov/vim-glsl'
 Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
@@ -109,7 +107,7 @@ let g:neomake_warning_sign = {'text': 'W', 'texthl': 'WarningMsg'}
 let g:neomake_informational_sign = {'text': 'I', 'texthl': 'ModeMsg'}
 let g:neomake_message_sign = {'text': 'M', 'texthl': 'MoreMsg'}
 let g:neomake_open_list = 2
-let g:LanguageClient_serverCommands = { 'rust': ['rustup', 'run', 'nightly', 'rls'] }
+let g:racer_experimental_completer = 1
 
 if g:bgtype == "dark"
 	set bg=dark
@@ -186,9 +184,11 @@ if has("autocmd")
 	autocmd BufRead,BufEnter *.h set filetype=c
 	autocmd BufRead,BufEnter *tmux.conf set filetype=tmux
 
-	autocmd FileType rust nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-	autocmd FileType rust nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-	autocmd FileType rust nnoremap <silent> <leader>c :call LanguageClient_textDocument_rename()<CR>
+	" Rust racer bindings
+	autocmd FileType rust nmap gd <Plug>(rust-def)
+	autocmd FileType rust nmap gs <Plug>(rust-def-split)
+	autocmd FileType rust nmap gx <Plug>(rust-def-vertical)
+	autocmd FileType rust nmap K <Plug>(rust-doc)
 
 	" Jump to the last editing position
 	autocmd BufReadPost * exe "normal! '\""

@@ -41,7 +41,8 @@ setopt share_history
 setopt no_hup
 
 PROMPT='%(?.%{$fg_bold[yellow]%}▶.%{$fg[red]%}●) %{$reset_color%}'
-PROMPT2='%{$fg_bold[black]%}◾ %{$reset_color%}'
+PROMPT2='%{$fg_bold[black]%}◾%{$reset_color%}'
+RPROMPT='%{$fg_bold[black]%}%~ %{$fg[white]%}%T%{$reset_color%}'
 
 precmd() {
 	[ "$PWD" -ef "$HOME" ] || fdb -a "$PWD"

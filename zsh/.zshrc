@@ -3,7 +3,6 @@
 
 autoload -U compinit && compinit
 autoload -U colors && colors
-# autoload -U zmv
 autoload -U edit-command-line
 autoload -U insert-composed-char
 zle -N edit-command-line
@@ -42,8 +41,9 @@ setopt no_hup
 
 PROMPT='%(?.%{$fg_bold[yellow]%}▶.%{$fg[red]%}●) %{$reset_color%}'
 PROMPT2='%{$fg_bold[black]%}◾%{$reset_color%}'
-RPROMPT='%{$fg_bold[black]%}%~ %{$fg[white]%}%T%{$reset_color%}'
+RPROMPT='%{$fg_bold[black]%}%~ %(V.%{$fg_bold[blue]%}%v .)%{$fg[white]%}%T%{$reset_color%}'
 
 precmd() {
+	psvar[1]=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
 	[ "$PWD" -ef "$HOME" ] || fdb -a "$PWD"
 }

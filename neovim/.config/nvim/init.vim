@@ -285,6 +285,8 @@ nmap ga <Plug>(EasyAlign)
 " Digraphs missing from RFC 1345
 " Ellipsis
 dig ,. 8230
+" Narrow no-break space
+dig NN 8239
 
 function! DumpColorScheme()
 	exec "redir > " . g:colors_name . ".vimTheme | silent hi | redir END"

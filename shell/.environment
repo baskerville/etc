@@ -3,7 +3,7 @@
 
 EDITOR=nvim
 PAGER=less
-BROWSER=open
+BROWSER=chromium
 export EDITOR PAGER BROWSER
 
 LANG="en_US.UTF-8"

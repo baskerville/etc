@@ -24,19 +24,18 @@ XDG_TMP_DIR="$HOME/tmp"
 export XDG_DOWNLOAD_DIR XDG_ETC_DIR XDG_COLORS_DIR XDG_TRASH_DIR XDG_BIN_DIR XDG_TMP_DIR
 
 GOPATH="$HOME/.go"
-SHARE_ROOT=/mnt/livebox/data
-LIBGS=/opt/pkg/lib/libgs.dylib
+LIBGS=/usr/local/lib/libgs.dylib
+XML_CATALOG_FILES=/usr/local/etc/xml/catalog
 TEXINPUTS=".:$XDG_DATA_HOME/texmf//:"
 PYTHONIOENCODING='utf-8'
-XML_CATALOG_FILES=/opt/pkg/etc/xml/catalog
 BC_ENV_ARGS="-ql $HOME/.bcrc"
-export GOPATH SHARE_ROOT LIBGS TEXINPUTS PYTHONIOENCODING XML_CATALOG_FILES BC_ENV_ARGS
+export GOPATH LIBGS XML_CATALOG_FILES TEXINPUTS PYTHONIOENCODING BC_ENV_ARGS
 
 DISPLAY=:0
-LIBRARY_PATH="/opt/pkg/lib:$LIBRARY_PATH"
+LIBRARY_PATH="/usr/local/lib:$LIBRARY_PATH"
 PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig
-CPPFLAGS=" -I/opt/pkg/include -I/opt/X11/include"
-LDFLAGS=" -L/opt/pkg/lib -L/opt/X11/lib"
+CPPFLAGS="-I/opt/X11/include"
+LDFLAGS="-L/opt/X11/lib"
 export DISPLAY LIBRARY_PATH PKG_CONFIG_PATH CPPFLAGS LDFLAGS
 
 NNTPSERVER=pasdenom.info
@@ -55,7 +54,6 @@ export JINJA_FILTERS_DIR DIANA_DOWNLOAD_DIR DIANA_INFO_COMMAND COPYFILE_DISABLE
 
 CLICOLOR=1
 LSCOLORS=ExDxCxcxBxGxgxHxHxFxfx
-# LS_COLORS="di=1;34:ln=1;33:so=1;32:pi=32:ex=1;31:bd=1;36:cd=36:su=1;37:sg=1;37:tw=1;35:ow=35:"
 GREP_OPTIONS='--color=auto'
 GREP_COLORS='ms=1;37:mc=1;37:sl=:cx=:fn=1;33:ln=1;36:bn=1;35:se=1;30'
 export CLICOLOR LSCOLORS GREP_OPTIONS GREP_COLORS

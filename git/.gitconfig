@@ -44,3 +44,5 @@
 	header = black bold
 	help = magenta bold
 	error = red bold
+[pull]
+	rebase = false

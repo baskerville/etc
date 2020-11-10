@@ -2,12 +2,13 @@ md5 = require "md5"
 utils = require "mp.utils"
 msg = require "mp.msg"
 
-bookmarks_path = os.getenv("XDG_CONFIG_HOME") .. "/mpv/scripts/bkms"
+bookmarks_path = os.getenv("XDG_DATA_HOME") .. "/mpv/bookmarks"
 epsilon_duration = 0.1
 
 function get_filepath ()
-	local filename = mp.get_property("filename")
-	return utils.join_path(bookmarks_path, md5.sumhexa(filename))
+	local full_path = utils.join_path(mp.get_property("working-directory"),
+	                                  mp.get_property("path"))
+	return utils.join_path(bookmarks_path, md5.sumhexa(full_path))
 end
 
 function add_bookmark ()

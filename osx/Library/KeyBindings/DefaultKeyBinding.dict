@@ -185,6 +185,7 @@ Key Modifiers
 			"S" = ("insertText:", " ");
 		};
 		"O" = {
+			"c" = ("insertText:", "©");
 			"e" = ("insertText:", "Œ");
 			"b" = ("insertText:", "∘");
 			">" = ("insertText:", "Ô");
@@ -318,6 +319,7 @@ Key Modifiers
 		};
 		">" = {
 			">" = ("insertText:", "»");
+			"=" = ("insertText:", "≥»");
 		};
 		"*" = {
 			"X" = ("insertText:", "×");
@@ -334,6 +336,7 @@ Key Modifiers
 		};
 		"=" = {
 			"e" = ("insertText:", "€");
+			"<" = ("insertText:", "≤");
 		};
 		"!" = {
 			"I" = ("insertText:", "¡");

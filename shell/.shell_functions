@@ -16,11 +16,6 @@ zc() {
 	z "$PWD" "$@"
 }
 
-oz() {
-	local fp="$(fdb -i "$XDG_DATA_HOME"/open.z -q "(?i)$@" | head -n 1)"
-	[ -e "$fp" ] && o "$fp"
-}
-
 f() {
 	pattern=$1
 	shift
@@ -31,20 +26,6 @@ F() {
 	pattern=$1
 	shift
 	bfs "${@:-.}" -iname "*${pattern}*"
-}
-
-lc() {
-	local start=${1:-1}
-	local end=${2:-"$start"}
-	fc -ln -$start -$end | sed 's/^[[:space:]]*//'
-}
-
-yc() {
-	lc $@ | pbcopy
-}
-
-pbfilter() {
-	pbpaste | "$@" | pbcopy
 }
 
 dehdr() {
@@ -63,132 +44,16 @@ bnd() {
 	bindkey -L | sed 's/\\e\([^-]\)/M-\1/g' | sed 's/\\C\([^-]\)/C-\1/g' | sed 's/\\C-/C-/g' | sed 's/\\e-/M-/g' | grep -i "$pattern"
 }
 
-mil() {
-	mediainfo --Info-Parameters
-}
-
-mi() {
-	mediainfo "--Inform=General;%$@%"
-}
-
-msa() {
-	ms "$@" | ma
-}
-
-ox() {
-	cmd=$1
-	shift
-	$cmd "$@" | tr '\n' '\0' | xargs -0 o
-}
-
-L() {
-	ls -d -- *."$@"
-}
-
-S() {
-	lS -d -- *."$@"
-}
-
-N() {
-	n -d -- *."$@"
-}
-
-R() {
-	while [ $# -gt 0 ] ; do
-		rm -v -- *."$1"
-		shift
-	done
-}
-
 bigfiles() {
-	du -m -d 0 "$@" | sort -n
-}
-
-dud() {
-	du -Lh -d 1 "$@"
-}
-
-dua() {
-	du -Lha "$@"
-}
-
-OO() {
-	tail -n "$@" | x o
-}
-
-count() {
-	l1 $@ | wc -l
-}
-
-weather_loc() {
-	wget -qO - "http://xoap.weather.com/search/search?where=$@" | grep 'loc id'
+	du -h -d 1 "${@:-.}" | sort -h
 }
 
 spell() {
 	echo $@ | hunspell -d en_US | grep '^&'
 }
 
-frspell() {
-	echo $@ | hunspell -d fr_FR | grep '^&'
-}
-
-cplr() {
-	local label=$1
-	shift
-	cp -LR "$@" /Volumes/"$label"/
-}
-
-mkmaildir() {
-	local maildir="$HOME/.maildir"
-	mkdir -p $maildir/$@/{cur,new,tmp}
-}
-
 conj() {
 	w3m "http://www.les-verbes.com/conjuguer.php?verbe=$@"
 }
-
-9man() {
-	9 man "$@" | less
-}
-
-#swc() {
- #compc -include-sources . -output $@.swc
-#}
-
-#airc() {
-	#if [ -d lib ] ; then
-		#amxmlc -library-path+=lib $@ 2>&1
-	#else
-		#amxmlc $@ 2>&1
-	#fi
-#}
-
-#airr() {
- #airc $@ && adl ${@%.*}-app.xml
-#}
-
-#asr() {
- #asc $@ && o ${@%.*}.swf
-#}
-
-#clinst() {
- #cp -r "$@" "$SBCL_SITE/$@"
-#}
-
-#clrefresh() {
- #find "$SBCL_SITE" -name "*.asd" | xargs -I % ln -sf "%" "$SBCL_SYSTEMS"
-#}
-
-#cllist() {
- #ls $@ "$SBCL_SYSTEMS"
-#}
-
-#clclean() {
- #rm $SBCL_SYSTEMS/*.asd
-#}
-
-#ecllink() {
- #find . -name \*.asd -exec ln -s {} . \;
-#}
 
 # vim: ft=sh

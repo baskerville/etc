@@ -35,7 +35,7 @@ bindkey '\e]' vi-find-next-char
 setopt brace_ccl
 setopt prompt_subst
 setopt no_case_glob extended_glob
-setopt hist_find_no_dups hist_reduce_blanks
+setopt hist_ignore_dups hist_find_no_dups hist_reduce_blanks
 setopt share_history
 setopt no_hup
 

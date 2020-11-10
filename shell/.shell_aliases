@@ -1,119 +1,49 @@
-alias x='tr "\n" "\0" | xargs -0'
+alias eal='e "$SHELL_ALIASES"'
+alias efu='e "$SHELL_FUNCTIONS"'
+
 alias cp='cp -i'
 alias mv='mv -i'
-alias cpr='cp -r'
-
-alias i='type -a'
-alias y='file -b'
-alias m=mutt
-alias g=rg
-alias mt='file -b --mime-type'
-alias me='file -b --mime-encoding'
-# alias ms='mpc search any'
-# alias ma='mpc add'
 alias p="pbpaste | e -"
+alias s='surfraw duckduckgo'
+alias i='type -a'
 alias c='pgrep -x mpop > /dev/null 2>&1 || mpop -a'
-alias hd="hexdump -C"
+alias g=rg
+alias m=mutt
+
+alias y='file -b'
+alias yt='file -b --mime-type'
+alias ye='file -b --mime-encoding'
+alias x='tr "\n" "\0" | xargs -0'
 
 alias chbin='chmod 755'
 alias chreg='chmod 644'
 alias operm='stat -f %p'
-alias lsync='rsync -vurt --modify-window 1'
 alias unpack='tar -xv --keep-newer-files -f'
-
-alias eal='e "$SHELL_ALIASES"'
-alias efu='e "$SHELL_FUNCTIONS"'
-alias eo='e -O'
+alias lsync='rsync -vurt --modify-window 1'
 
 alias ls='ls -h'
-alias l='ls'
-alias l1='ls -1'
-alias la='ls -a'
-alias ll='ls -l'
-alias lal='ls -al'
+alias n='ls -rtc'
 alias lS='ls -LrksS'
 alias lr='ls -R'
 alias lsd='ls -d *(/)'
 
-alias n='ls -rtc'
-alias nn='n -1 | tail -n 1'
-alias on='o "$(nn)"'
-alias so='o "$(rndfp)"'
-alias gin='fileinfo "$(nn)"'
 alias lta='later add'
 alias lts='later ls'
 alias ltr='later rm'
 
-alias rmrf='rm -rf'
-alias rmnn='rm -iv -- "$(nn)"'
-alias rmrfnn='rmrf -v -- "$(nn)"'
-# alias ded='find . -type d -empty -print -delete'
-# alias duffr='duff -f "%n" -r .'
-
-alias yd='youtube-dl -o "%(title)s-%(id)s.%(ext)s" -f "bestvideo[height<=1080]+bestaudio/best[height<=1080]"'
-
+alias yd='youtube-dl -f "bestvideo+bestaudio"'
 alias fren='trans fr:en'
 alias enfr='trans en:fr'
-alias deen='trans de:en'
-alias ende='trans en:de'
-alias iten='trans it:en'
-alias enit='trans en:it'
-alias esen='trans es:en'
-alias enes='trans en:es'
 alias jaen='trans ja:en'
 alias enja='trans en:ja'
-alias elen='trans el:en'
-alias enel='trans en:el'
 
-alias s='surfraw duckduckgo'
-alias mdur="mediainfo --Inform='General;%Duration/String%\n'"
-alias vbpf="mediainfo --Inform='Video;%Bits-(Pixel*Frame)%\n'"
-alias vres="mediainfo --Inform='Video;%Width%x%Height%\n'"
-
-alias detox='detox -v'
-alias mp4box='MP4Box'
-alias telnet='gtelnet'
-
-alias up='git commit -am Update'
-alias pu='git push'
-alias upu='up && pu'
-
-alias gdb='rlwrap gdb -q'
-alias irb='irb --simple-prompt'
-# alias csi='rlwrap csi -q'
-alias maxima='rlwrap maxima -q'
 alias python='rlwrap python3 -q'
 alias python2='rlwrap python2'
-alias bc='bc -q'
-# alias pps2pdf='loimpress --nologo --convert-to pdf'
-alias dfc='dfc -np /dev'
 alias slrn='slrn --spool'
 
-# alias dfc='dfc -d -c never'
-# alias dfcr='dfc -nt ext4'
-# alias dfcs='dfc -np /dev/sdc'
-
+alias T='date +%H:%M:%S'
 alias D='date +%Y-%m-%d'
-alias T='date +%H:%M'
-alias M='date +%B'
-alias Y='date +%Y'
 
-# alias lp='lp -o fitplot'
-# alias lpb='lp -o StpFullBleed=True -o StpiShrinkOutput=Crop'
-# alias lpm='lp -o MediaType=PhotopaperMatte -o Resolution=603x600dpi'
-# alias lpp='lp -o MediaType=PhotopaperPlus -o Resolution=603x600dpi'
 alias dlp='lp -o Duplex=DuplexNoTumble'
-# alias lp6='lp -o Resolution=600dpi'
-# alias dlp6='lp6 -o Duplex=DuplexNoTumble'
-# alias lpb='lp -o scaling=103'
-# alias dlpb='lpb -o Duplex=DuplexNoTumble'
-# alias lpb6='lpb -o Resolution=600dpi'
-# alias dlpb6='lpb6 -o Duplex=DuplexNoTumble'
-# alias nzd='nzbget -D'
-# alias nzl='nzbget -L'
-# alias nzq='nzbget -Q'
-
-# alias cgl='castget -ln1'
-# alias cgg='castget -vn1'
 
 # vim: ft=sh

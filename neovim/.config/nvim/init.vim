@@ -26,7 +26,13 @@ set copyindent
 set nobackup
 " synchronize vim's cwd with the cwd of the current buffer
 set autochdir
+" join lines with a single space
+set nojoinspaces
 
+" search incrementally
+set incsearch
+" highlight every search results
+set hlsearch
 " ignore case in search patterns
 set ignorecase
 " unset &ignorecase if the search pattern contains upper case characters
@@ -41,9 +47,11 @@ set termguicolors
 " enable contextual cursor shapes
 set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
 
+" always show the status bar
+set laststatus=2
 " content of the status line
 set statusline=
-" full path, modified, readonly, help buffer and preview window flags
+" full path, modified, read-only, help buffer and preview window flags
 set statusline+=%F%m%r%h%w
 " right align the rest of the status line, file type
 set statusline+=\ %=%Y
@@ -60,6 +68,8 @@ set tabline=%!GetTabLine()
 set dictionary+=/usr/share/dict/words
 " characters used for the 'list' mode
 set listchars=eol:¬,tab:▸\ ,trail:•,extends:»,precedes:«,conceal:†,nbsp:␣
+" keep search for tags file upward ; stop at $HOME
+set tags+=tags;~
 
 if !exists('g:loaded_matchit')
 	runtime! macros/matchit.vim
@@ -72,28 +82,21 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'suy/vim-context-commentstring'
-Plug 'benekastah/neomake'
-Plug 'pangloss/vim-javascript'
-Plug 'vim-scripts/applescript.vim'
-Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
-Plug 'tikhomirov/vim-glsl'
-Plug 'leafgarland/typescript-vim'
-Plug 'mxw/vim-jsx'
 Plug 'junegunn/vim-easy-align'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
-Plug 'tobinvanpelt/vim-coffee-script'
-Plug 'justinmk/vim-syntax-extra'
+Plug 'neomake/neomake'
+Plug 'rust-lang/rust.vim'
+Plug 'ziglang/zig.vim'
 Plug 'cespare/vim-toml'
-Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'racer-rust/vim-racer'
+Plug 'nsf/gocode', {'rtp': 'nvim'}
+Plug 'pangloss/vim-javascript'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax'
-Plug 'groenewege/vim-less'
-Plug 'nsf/gocode', {'rtp': 'vim'}
-Plug 'jnurmine/Zenburn'
+Plug 'justinmk/vim-syntax-extra'
 Plug 'baskerville/vim-quirks'
 call plug#end()
 
@@ -102,6 +105,7 @@ filetype plugin indent on
 
 let g:terminal_scrollback_buffer_size = 100000
 let g:bgtype = system("cat $HOME/.bgtype")
+let g:neomake_rust_cargo_command = ['check', '--all-features']
 let g:neomake_error_sign = {'text': 'E', 'texthl': 'ErrorMsg'}
 let g:neomake_warning_sign = {'text': 'W', 'texthl': 'WarningMsg'}
 let g:neomake_informational_sign = {'text': 'I', 'texthl': 'ModeMsg'}
@@ -185,6 +189,7 @@ if has("autocmd")
 	autocmd BufRead,BufEnter *tmux.conf set filetype=tmux
 
 	" Rust racer bindings
+	autocmd FileType rust nmap <C-]> <Plug>(rust-def)
 	autocmd FileType rust nmap gd <Plug>(rust-def)
 	autocmd FileType rust nmap gs <Plug>(rust-def-split)
 	autocmd FileType rust nmap gx <Plug>(rust-def-vertical)
@@ -246,16 +251,19 @@ nmap <leader>z viw1z=
 nmap <leader>Z viw2z=
 nmap <leader>w :!open =expand("<cword>")<cr><cr><cr>
 nmap <leader>f ya":!open =getreg("*")<cr><cr><cr>
+nmap <leader>( :cp<cr>
+nmap <leader>) :cn<cr>
 nmap <leader>[ :lp<cr>
 nmap <leader>] :lne<cr>
 nmap <leader>} :lnf<cr>
 nmap <leader>{ :lpf<cr>
-nmap <leader>* :lvimgrep =expand("<cword>")<cr> *
+nmap <leader>* :vimgrep /=expand("<cword>")<cr>/ **/*.*
 nmap <silent> <leader>? :call Define(expand("<cword>"))<cr>
 nmap <silent> <leader>. :let @*=expand("%")<cr>
 nmap <silent> <leader>/ :let @*=expand("%:p")<cr>
 nmap <silent> <leader>I :let @*=synIDattr(synID(line("."),col("."),1),"name")<cr>
 nmap <silent> <leader>ga :call GetCharName()<cr>
+nmap <silent> <leader>gb :call GetFileOffset()<cr>
 nmap <silent> <leader>= :call TransparentlyExecute("normal gg=G")<cr>
 nmap <silent> <leader>C :call ToggleClipboard()<cr>
 nmap <silent> <F1> :set number!<cr>
@@ -373,6 +381,10 @@ function! GetCharName()
 	let response = system("uniname", @")
 	echomsg response
 	let @" = clip
+endfunction
+
+function! GetFileOffset()
+    echomsg line2byte(line('.')) + col('.') - 1
 endfunction
 
 function! ToggleViewMode()

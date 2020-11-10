@@ -3,7 +3,7 @@
 
 EDITOR=nvim
 PAGER=less
-BROWSER=chromium
+BROWSER=open
 export EDITOR PAGER BROWSER
 
 LANG="en_US.UTF-8"
@@ -33,9 +33,7 @@ export GOPATH LIBGS XML_CATALOG_FILES TEXINPUTS PYTHONIOENCODING BC_ENV_ARGS
 
 DISPLAY=:0
 LIBRARY_PATH="/usr/local/lib:$LIBRARY_PATH"
-PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig
-CPPFLAGS="-I/opt/X11/include"
-LDFLAGS="-L/opt/X11/lib"
+PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 export DISPLAY LIBRARY_PATH PKG_CONFIG_PATH CPPFLAGS LDFLAGS
 
 NNTPSERVER=pasdenom.info

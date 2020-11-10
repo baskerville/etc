@@ -97,10 +97,8 @@ bind pager B bounce-message
 bind index,pager,attach,compose Q exit
 
 macro compose a "<attach-file><kill-line>$XDG_DOWNLOAD_DIR/"
-macro index,pager Y ":set pipe_decode\n<pipe-message>xclip -sel clip -i\n:unset pipe_decode\n"
+macro index,pager Y ":set pipe_decode\n<pipe-message>pbcopy\n:unset pipe_decode\n"
 macro index,pager A "<pipe-message>view_attachments\n"
-macro index,pager , "<pipe-message>yank_from\n"
-macro index,pager \ef "<pipe-message>mutt_show_xface\n"
 macro attach S "<save-entry><kill-line>$XDG_DOWNLOAD_DIR/\na"
 macro index ( "<search-reverse>~P\n"
 macro index ) "<search>~P\n"
@@ -111,18 +109,8 @@ macro index M "<tag-pattern>.\n<clear-flag>N<clear-flag>O<clear-flag>*" "Mark al
 macro index,pager gi "<change-folder>=inbox\n" "Go to INBOX"
 macro index,pager gs "<change-folder>=sent\n" "Go to Sent Mail"
 macro index,pager gd "<change-folder>=drafts\n" "Go to Drafts"
-macro index,pager gl "<change-folder>=lists\n" "Go to Lists"
-macro index,pager gk "<change-folder>=suckless\n" "Go to Suckless"
-macro index,pager ga "<change-folder>=arch\n" "Go to Arch"
-macro index,pager gc "<change-folder>=commandes\n" "Go to Commandes"
-macro index,pager gp "<change-folder>=paypal\n" "Go to Paypal"
-macro index,pager gf "<change-folder>=fai\n" "Go to FAI"
-macro index,pager gb "<change-folder>=bspwm\n" "Go to Bspwm"
-macro index,pager go "<change-folder>=golang\n" "Go to Golang"
-macro index,pager gr "<change-folder>=starred\n" "Go to Starred"
-macro index,pager gt "<change-folder>=topics\n" "Go to Topics"
-macro index,pager * "<save-message>=starred\n" "Move to Starred"
-macro index,pager _ "<save-message>=topics\n" "Move to Topics"
+macro index,pager ga "<change-folder>=archives\n" "Go to Archives"
+macro index,pager * "<save-message>=archives\n" "Move to Archives"
 macro pager \ee ":unset display_filter<enter><exit><display-message>" "Clear display filter"
 macro pager \er ":set display_filter=\"/usr/bin/tr 'A-Za-z' 'N-ZA-Mn-za-m'\"<enter><exit><display-message>" "Rot13 display filter"
 
@@ -133,4 +121,4 @@ folder-hook  =sent 'set index_format = "%3C %D  %4c  %?X?A& ?%Z  %-21.21t  %s"'
 
 folder-hook . bind index <return> display-message
 
-mailboxes =inbox =lists =bspwm =sxhkd =baskerville =commandes =paypal =fai =xd
+mailboxes =inbox =archives
